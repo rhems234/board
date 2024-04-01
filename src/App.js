@@ -1,11 +1,12 @@
-//import logo from './logo.svg';
-//import './App.css';
-import LoginForm from "./login/LoginForm";
+import React from "react";
+import LoginForm from "./User/LoginForm";
+// import SignupForm from "./User/SignupForm.js";
 
 function App() {
   return (
     <div>
       <LoginForm/>
+      {/* <SignupForm/> */}
     </div>
   );
 }

@@ -23,7 +23,7 @@ const SignupForm = () => {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ username, phoneNumber, password })
+                body: JSON.stringify({ username, phoneNumber, password, confirmPassword })
             });
             const data = await response.text();
             alert(data); // 서버로부터의 응답을 사용자에게 보여줌

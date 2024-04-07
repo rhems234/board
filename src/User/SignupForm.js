@@ -19,12 +19,13 @@ const SignupForm = () => {
         // 회원가입 정보를 서버로 전송
         try {
             const response = await fetch('/api/signup', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ username, phoneNumber, password, confirmPassword })
-            });
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ username, phoneNumber, password, confirmPassword })
+});
+
             const data = await response.text();
             alert(data); // 서버로부터의 응답을 사용자에게 보여줌
         } catch (error) {

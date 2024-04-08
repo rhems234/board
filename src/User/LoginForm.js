@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const LoginForm = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const history = useHistory();
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -20,7 +19,7 @@ const LoginForm = () => {
             });
             if (response.ok) {
                 // 로그인 성공 시 페이지 이동 또는 다른 작업 수행
-                history.push('/dashboard'); // 로그인 성공 후 이동할 페이지
+                navigate('/'); // 로그인 성공 후 이동할 페이지
             } else {
                 // 로그인 실패 시 처리
                 console.error('로그인 실패');

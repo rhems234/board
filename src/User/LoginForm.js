@@ -19,7 +19,7 @@ const LoginForm = () => {
             });
             if (response.ok) {
                 // 로그인 성공 시 페이지 이동 또는 다른 작업 수행
-                navigate('/'); // 로그인 성공 후 이동할 페이지
+                navigate('/chat'); // 로그인 성공 후 이동할 페이지
             } else {
                 // 로그인 실패 시 처리
                 console.error('로그인 실패');

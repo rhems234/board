@@ -1,0 +1,49 @@
+/* SignupForm.css */
+
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.signup-heading {
+    margin-bottom: 20px;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.error-message {
+    color: red;
+    margin-top: 5px;
+}
+
+.signup-button {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* 스타일링을 변경하고 싶은 경우 여기에 추가하세요 */

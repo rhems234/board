@@ -8,13 +8,15 @@ const ChatPage = () => {
 
   useEffect(() => {
     // 소켓 이벤트 핸들러 등록
-    socket.on('chat message', (message) => {
+    const handleReceivemessage = (message) => {
       setMessages((prevMessages) => [...prevMessages, message]);
-    });
+    };
+
+    socket.on('chat message', handleReceivemessage);
 
     // 컴포넌트가 언마운트될 때 이벤트 핸들러 제거
     return () => {
-      socket.off('chat message');
+      socket.off('chat message', handleReceivemessage);
     };
   }, [socket]);
 
